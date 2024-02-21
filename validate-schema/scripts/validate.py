@@ -7,7 +7,7 @@ import json
 import jsonschema
 
 here = os.path.abspath(__file__)
-root = os.path.dirname(os.path.dirname(here))
+root = os.path.dirname(here)
 
 # Validation for the compspec.json files, a compatibility group schema,
 # is done with an existing standard, json graph format
