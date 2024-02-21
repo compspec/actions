@@ -1,0 +1,18 @@
+name: validate-schema compspec action
+description: Validate a compatibility schema artifact
+inputs:
+  schema:
+    description: path to schema.json to validate
+    required: true
+
+runs:
+  using: composite
+  steps:
+  - name: Check for New Releases
+    id: check
+    env:
+      schema: ${{ inputs.schema }}
+      action_path: ${{ github.action_path }}
+    run: |
+      python ${action_path}/scripts/validate.py ${schema}
+    shell: bash
