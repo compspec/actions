@@ -1,0 +1,15 @@
+name: actions test
+on:
+  pull_request: []
+
+jobs:
+  validate-schema:
+    name: Validate schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Update with Upstream
+        uses: ./validate-schema
+        with:
+          schema: ./validate-schema/example-schema.json
