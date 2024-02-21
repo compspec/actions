@@ -29,7 +29,7 @@ def get_parser():
     return parser
 
 
-def main(root):
+def main():
     """
     Validate the format of WIP prototype specs.
     """

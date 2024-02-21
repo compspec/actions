@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Update with Upstream
+      - name: Validate Schema
         uses: ./validate-schema
         with:
           schema: ./validate-schema/example-schema.json
