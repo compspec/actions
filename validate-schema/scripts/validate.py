@@ -11,7 +11,7 @@ root = os.path.dirname(here)
 
 # Validation for the compspec.json files, a compatibility group schema,
 # is done with an existing standard, json graph format
-schema_file = os.path.join(here, "json-graph-schema_v2.json")
+schema_file = os.path.join(root, "json-graph-schema_v2.json")
 
 
 def read_json(filename):
