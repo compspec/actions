@@ -14,5 +14,6 @@ runs:
       schema: ${{ inputs.schema }}
       action_path: ${{ github.action_path }}
     run: |
+      pip install jsonschema
       python ${action_path}/scripts/validate.py ${schema}
     shell: bash

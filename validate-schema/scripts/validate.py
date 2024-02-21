@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
+import argparse
 import sys
 import os
-import re
 import json
 import jsonschema
 
 here = os.path.abspath(__file__)
-root = os.path.dirname(os.path.dirname(here))
+root = os.path.dirname(here)
 
 # Validation for the compspec.json files, a compatibility group schema,
 # is done with an existing standard, json graph format
-schema_file = os.path.join(here, "json-graph-schema_v2.json")
+schema_file = os.path.join(root, "json-graph-schema_v2.json")
 
 
 def read_json(filename):
@@ -29,7 +29,7 @@ def get_parser():
     return parser
 
 
-def main(root):
+def main():
     """
     Validate the format of WIP prototype specs.
     """
